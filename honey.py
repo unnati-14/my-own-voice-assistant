@@ -7,7 +7,7 @@ import os
 import smtplib
 from dotenv import load_dotenv
 load_dotenv()
-
+chrome_path = "C://Users//Singh//AppData//Local//Google//Chrome//Application//chrome.exe %s"
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice',voices[0].id)
@@ -75,22 +75,22 @@ if __name__ == "__main__":
             speak(results)
 
         elif 'open youtube' in query:
-            webbrowser.open("youtube.com")
+            webbrowser.get(chrome_path).open("youtube.com")
 
         elif 'open google' in query:
-            webbrowser.open("google.com")
+            webbrowser.get(chrome_path).open("google.com")
         
         elif 'open stackoverflow' in query:
-            webbrowser.open("stackoverflow.com")
+            webbrowser.get(chrome_path).open("stackoverflow.com")
 
         elif 'open bootstrap' in query:
-            webbrowser.open("getbootstrap.com")
+            webbrowser.get(chrome_path).open("getbootstrap.com")
 
         elif 'open classroom' in query:
-            webbrowser.open("classroom.google.com")
+            webbrowser.get(chrome_path).open("classroom.google.com")
 
         elif ' open chef' in query:
-            webbrowser.open("codechef.com")
+            webbrowser.get(chrome_path).open("codechef.com")
 
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
